@@ -1,1 +1,12 @@
 Main.class
+org\geo\model\Shape.class
+org\geo\model\Circle$Builder.class
+org\geo\model\Measurement.class
+org\geo\model\Circle.class
+org\geo\model\Triangle.class
+org\geo\calculator\Calculator.class
+org\geo\model\Cube.class
+org\geo\model\AvailableShapes.class
+org\geo\model\ThreeDimensionalShape.class
+org\geo\model\Sphere.class
+org\geo\model\TwoDimensionalShape.class
