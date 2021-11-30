@@ -31,7 +31,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         ActorSystem system = ActorSystem.create(Behaviors.empty(), "system");
         final Http http = Http.get(system);
-        final CompletionStage<ServerBinding> server = http.newServerAt("localhost", 8081).bind(createRoute1());
+        final CompletionStage<ServerBinding> server = http.newServerAt("0.0.0.0", 8081).bind(createRoute1());
         logger.info("Server online at http://localhost:8081/\nPress RETURN to stop...");
         System.in.read();
         server.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
