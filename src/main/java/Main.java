@@ -61,7 +61,7 @@ public class Main {
     private static Supplier<Route> ccc(Map<String, String> params, Function<Map<String, String>, CompletableFuture<Double>> fn) {
         return () -> {
             try {
-                return fn.apply(params).thenApply(v -> complete(v.toString())).exceptionally(e -> complete(e.getMessage())).get();
+                return fn.apply(params).thenApply(v -> complete(v.toString())).exceptionally(e -> { e.printStackTrace(); return complete(e.getMessage());}).get();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
