@@ -59,6 +59,7 @@ public class Main {
     }
 
     private static Supplier<Route> ccc(Map<String, String> params, Function<Map<String, String>, CompletableFuture<Double>> fn) {
+        logger.info("params: {}", params);
         return () -> {
             try {
                 return fn.apply(params).thenApply(v -> complete(v.toString())).exceptionally(e -> { e.printStackTrace(); return complete(e.getMessage());}).get();
