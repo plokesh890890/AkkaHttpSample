@@ -44,7 +44,7 @@ public class Main {
                         )),
                 pathPrefix("user", () -> path("a", () -> get(() -> complete("user a")))),
                 pathPrefix("num", () -> path(PathMatchers.integerSegment(), i -> complete(String.format("Hello number %d", i))))
-        )
+        );;;
     }
 
     private static Route createRoute1() {
