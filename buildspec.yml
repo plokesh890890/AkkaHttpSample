@@ -10,7 +10,9 @@ phases:
   post_build:
     commands:
       - echo "Entered the post-build phase"
-      - mv target/**.jar ./
+      - mv target/AkkatHttpTest-1.0-SNAPSHOT.jar ./
 artifacts:
   files:
-    - ./**.jar
+    - ./AkkatHttpTest-1.0-SNAPSHOT.jar
+    - appspec.yml
+  discard-paths: yes
