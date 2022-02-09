@@ -4,7 +4,7 @@ files:
   - source: ./AkkatHttpTest-1.0-SNAPSHOT.jar
     destination: /home/ec2-user/app1/
   - source: ./scripts/start_server.sh
-  	destination: /home/ec2-user/app1/scripts/
+	destination: /home/ec2-user/app1/scripts/
 hooks:
   ApplicationStart:
     - location: scripts/start_server.sh
