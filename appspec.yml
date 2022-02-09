@@ -5,8 +5,14 @@ files:
     destination: /home/ec2-user/app1/
   - source: ./start_server.sh
     destination: /home/ec2-user/app1/scripts/
+  - source: ./stop_server.sh
+    destination: /home/ec2-user/app1/scripts/
 hooks:
   ApplicationStart:
     - location: ./start_server.sh
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: ./stopt_server.sh
       timeout: 300
       runas: root
