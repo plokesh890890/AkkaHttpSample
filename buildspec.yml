@@ -15,5 +15,5 @@ artifacts:
   files:
     - ./AkkatHttpTest-1.0-SNAPSHOT.jar
     - appspec.yml
-    - ./scripts/**
+    - ./scripts/start_server.sh
   discard-paths: yes
