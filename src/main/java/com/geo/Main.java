@@ -34,8 +34,8 @@ public class Main {
         final Http http = Http.get(system);
         final CompletionStage<ServerBinding> server = http.newServerAt("0.0.0.0", 8081).bind(createRoute1());
         logger.info("Server online at http://localhost:8081/\nPress RETURN to stop...");
-        System.in.read();
-        server.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
+//        System.in.read();
+//        server.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
     }
 
     private static Route createRoute() {
