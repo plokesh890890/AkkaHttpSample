@@ -33,7 +33,7 @@ public class Main {
         ActorSystem system = ActorSystem.create(Behaviors.empty(), "system");
         final Http http = Http.get(system);
         final CompletionStage<ServerBinding> server = http.newServerAt("0.0.0.0", 8081).bind(createRoute1());
-        logger.info("Server online at http://localhost:8081/\nPress RETURN to stop...");
+        logger.info("Server online at http://localhost:8081/");
 //        System.in.read();
 //        server.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
     }
